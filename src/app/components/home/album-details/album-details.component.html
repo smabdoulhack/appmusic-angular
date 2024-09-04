@@ -1,0 +1,21 @@
+<main>
+  <article class="album-card">
+    <div class="card-header">
+      <h4>{{ album.genre }}</h4>
+    </div>
+    <a href="album-details/{{ albumTitle }}" class="title">{{ album.title }} </a>
+    <div>
+      <p class="description">{{ album.description }}</p>
+      <p>duration: {{ album.duration.split(":")[0] }} minutes</p>
+      <p>Like: {{ 5 }}</p>
+    </div>
+    <div class="card-footer">
+      <ul>
+        <li *ngFor="let tag of album.tags">{{ tag }}</li>
+      </ul>
+    </div>
+    <p class="img-container">
+      <img [src]="album.coverImage" alt="" />
+    </p>
+  </article>
+</main>

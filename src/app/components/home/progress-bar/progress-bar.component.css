@@ -1,0 +1,8 @@
+.progress-bar-wrapper {
+    text-align: left;
+  }
+  
+  .progress-bar-wrapper progress {
+    height: 20px;
+    width: 100%;
+  }

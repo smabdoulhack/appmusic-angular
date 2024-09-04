@@ -1,0 +1,18 @@
+<div *ngIf="albumPlayingData" class="progress-bar-wrapper">
+    <div>
+      <label for="playlist-progress"
+        >Title: {{ 'albumPlayingData?.title' }}, Artist:
+        <!-- {{ props.playingData.artist }} -->
+      </label>
+    </div>
+    <div>
+      <progress
+        id="playlist-progress"
+        :max="maxProgress"
+        :value="progress"
+      ></progress>
+    </div>
+    <div>
+      {{ 'albumPlayingData.number' }}/{{ 'props.playingData.tracks.length' }}
+    </div>
+  </div>

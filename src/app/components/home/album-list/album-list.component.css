@@ -1,0 +1,98 @@
+.main {
+  min-height: 105vh;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.album-card {
+  font-family: Roboto, sans-serif;
+  max-width: 700px;
+  padding: 16px 8px;
+  margin: 30px auto;
+  text-align: left;
+  color: #374151;
+  background-color: #fff;
+}
+
+.section {
+  flex: 1;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/****************** search bar ************/
+.search-wrapper {
+  display: flex;
+}
+
+form {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-wrapper input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  outline: 1px solid transparent;
+}
+
+.search-wrapper input:focus {
+  outline: 1px solid #94a3b8;
+}
+
+.search-wrapper button {
+  margin-left: 10px;
+  border: none;
+  padding: 8px 24px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #6b7280;
+}
+
+/********** Pagination *************/
+ul {
+  padding-left: 0;
+}
+
+ul > li {
+  min-width: 50px;
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid lightskyblue;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+ul > li.active {
+  color: #fff;
+  background-color: blue;
+}
+
+ul > li:hover {
+  color: #fff;
+  background-color: blue;
+}
+
+ul li:first-child,
+ul li:last-child {
+  background-color: rgba(128, 128, 128, 0.445);
+}
+
+@media (max-width: 678px) {
+  .main {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

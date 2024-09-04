@@ -1,0 +1,42 @@
+<main class="main">
+  <app-aside
+    *ngIf="albumPlayingData"
+    [albumPlayingData]="albumPlayingData"
+    (emitPlaySignal)="receivPlaySignal($event)"
+  ></app-aside>
+  <section class="section">
+    <app-progress-bar
+      *ngIf="isPlaying"
+      [albumPlayingData]="albumPlayingData"
+      [isPlaying]="isPlaying"
+    ></app-progress-bar>
+    <div class="search-wrapper">
+      <form>
+        <input
+          type="search"
+          name="sarchbar"
+          id="sarchbar"
+          placeholder="Entrer un mot ou une expression"
+          [(ngModel)]="keyword"
+          (keydown)="search()"
+        />
+      </form>
+    </div>
+    <h1>Page principale Album Music</h1>
+    <div>
+      <ul>
+        <li>Prev</li>
+        @for (item of [1,2,3]; track $index) {
+        <li class="">{{ item }}</li>
+        }
+        <li>Next</li>
+      </ul>
+    </div>
+    <div *ngFor="let album of albums; let id = index" class="album-card">
+      <app-album
+        [album]="album"
+        (emitAlbumData)="receivAlbumData($event)"
+      ></app-album>
+    </div>
+  </section>
+</main>

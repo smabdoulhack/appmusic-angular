@@ -1,0 +1,71 @@
+a {
+    text-decoration: none;
+  }
+  
+  
+  h4 {
+    padding: 8px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: Roboto, sans-serif;
+    background-color: #e9d5ff;
+  }
+  
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #374151;
+  }
+  
+  .title:hover {
+    text-decoration: underline;
+  }
+  
+  .description {
+    padding-top: 15px;
+    font-size: 1rem;
+  }
+  
+  ul {
+    margin-top: 10px;
+    display: flex;
+    padding-left: 0;
+  }
+  
+  ul li {
+    list-style: none;
+    padding: 4px 8px;
+    margin-right: 20px;
+    color: #fff;
+    background: rgb(45 212 191);
+  }
+  
+  .card-footer a {
+    padding: 5px 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.164);
+  }
+  
+  .details-button {
+    cursor: pointer;
+  }
+  
+  .card-footer a:hover {
+    color: #fff;
+    background-color: #374151;
+  }
+  
+  .card-footer p {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .card-footer p span {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-footer p svg {
+    margin-right: 8px;
+    cursor: pointer;
+  }

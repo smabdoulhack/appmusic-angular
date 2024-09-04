@@ -1,0 +1,59 @@
+.aside {
+    height: fit-content;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    max-width: 316px;
+    padding: 24px 8px;
+    flex: 1;
+    background-color: #fff;
+  }
+  
+  .aside-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #374151;
+  }
+  
+  .name {
+    margin: 12px 0;
+  }
+  
+  .aside-hero {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .play-button {
+    padding: 5px 10px;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: #3b82f6;
+    border: none;
+  }
+  
+  .play-button span {
+    margin-right: 5px;
+  }
+  
+  .play-button:hover {
+    background-color: #002663e0;
+  }
+  
+  .list-title {
+    padding: 8px;
+    margin: 25px 0;
+    background-color: #1d4ed8;
+    color: #fff;
+  }
+  
+  ul {
+    padding-left: 0;
+  }
+  
+  ul > li {
+    line-height: 3rem;
+    font-style: italic;
+  }
