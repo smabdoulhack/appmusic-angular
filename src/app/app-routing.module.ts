@@ -6,6 +6,9 @@ import { AlbumDetailsComponent } from './components/home/album-details/album-det
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { AlbumListComponent } from './components/home/album-list/album-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ArtistListComponent } from './components/artist/artist-list/artist-list.component';
+import { PlaylistListComponent } from './components/playlist/playlist-list/playlist-list.component';
+import { MusicListComponent } from './components/music/music-list/music-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
@@ -19,6 +22,9 @@ const routes: Routes = [
   },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
+  { path: 'artist', component: ArtistListComponent },
+  { path: 'playlist', component: PlaylistListComponent },
+  { path: 'music', component: MusicListComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

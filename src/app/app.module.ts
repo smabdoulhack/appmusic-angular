@@ -42,6 +42,12 @@ import { AlbumFormComponent } from './components/home/album-form/album-form.comp
     MusicFormComponent,
     MusicListComponent,
     AlbumFormComponent,
+    ArtistFormComponent,
+    ArtistListComponent,
+    PlaylistFormComponent,
+    PlaylistListComponent,
+    MusicFormComponent,
+    MusicListComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
