@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ArtistListComponent } from './components/artist/artist-list/artist-list.component';
 import { PlaylistListComponent } from './components/playlist/playlist-list/playlist-list.component';
 import { MusicListComponent } from './components/music/music-list/music-list.component';
+import { AuthGuard } from './guards/auth/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/albums', pathMatch: 'full' },
@@ -19,12 +20,17 @@ const routes: Routes = [
       { path: '', component: AlbumListComponent },
       { path: 'album-details/:title', component: AlbumDetailsComponent },
     ],
+    canActivate: [AuthGuard],
   },
-  { path: 'sign-in', component: SignInComponent },
-  { path: 'sign-up', component: SignUpComponent },
-  { path: 'artist', component: ArtistListComponent },
-  { path: 'playlist', component: PlaylistListComponent },
-  { path: 'music', component: MusicListComponent },
+  { path: 'signin', component: SignInComponent },
+  { path: 'signup', component: SignUpComponent },
+  { path: 'artist', component: ArtistListComponent, canActivate: [AuthGuard] },
+  {
+    path: 'playlist',
+    component: PlaylistListComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'music', component: MusicListComponent, canActivate: [AuthGuard] },
   { path: '**', component: PageNotFoundComponent },
 ];
 

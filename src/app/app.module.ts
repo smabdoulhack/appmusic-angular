@@ -13,7 +13,7 @@ import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProgressBarComponent } from './components/home/progress-bar/progress-bar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ArtistFormComponent } from './components/artist/artist-form/artist-form.component';
 import { ArtistListComponent } from './components/artist/artist-list/artist-list.component';
 import { PlaylistFormComponent } from './components/playlist/playlist-form/playlist-form.component';
@@ -21,6 +21,8 @@ import { PlaylistListComponent } from './components/playlist/playlist-list/playl
 import { MusicFormComponent } from './components/music/music-form/music-form.component';
 import { MusicListComponent } from './components/music/music-list/music-list.component';
 import { AlbumFormComponent } from './components/home/album-form/album-form.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './http-interceptors/jwt.interceptors';
 
 @NgModule({
   declarations: [
@@ -47,10 +49,19 @@ import { AlbumFormComponent } from './components/home/album-form/album-form.comp
     PlaylistFormComponent,
     PlaylistListComponent,
     MusicFormComponent,
-    MusicListComponent
+    MusicListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

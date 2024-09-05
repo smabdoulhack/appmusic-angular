@@ -5,6 +5,10 @@
       <li><a routerLink="artist">Artist</a></li>
       <li><a routerLink="playlist">Playlist</a></li>
       <li><a routerLink="music">Music</a></li>
+      <li *ngIf="!authService.isAuthenticated(); else login"><a routerLink="signin">Se connecter</a></li>
+      <ng-template #login>
+        <li><a (click)="logout()" class="cursor-pointer">Se Déconnecter</a></li>
+      </ng-template>
     </ul>
   </nav>
   <div>

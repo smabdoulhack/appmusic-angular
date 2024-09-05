@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-/*@tailwind base;  @tailwind components 
-@tailwind utilities*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  font-family: Roboto, sans-serif;
+  /* font-family: Roboto, sans-serif;
   background-color: rgb(249 249 249);
-  opacity: 1;
+  opacity: 1; */
 }
 
 #app {
@@ -15,16 +17,16 @@ body {
 }
 
 nav a {
-  text-decoration: none;
+  /* text-decoration: none;
   color: #fff;
-  transition: 0.4s;
+  transition: 0.4s; */
   /* padding: 3px; */
 }
 
 ul li {
-  list-style: none;
+  /* list-style: none; */
 }
 
 button {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
